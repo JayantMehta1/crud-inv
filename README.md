@@ -2,11 +2,6 @@
 I created an inventory tracker which has CRUD capabilities along with the ability to restore recently deleted items.
 Technologies used include Node.js, Express.js, MongoDB, JavaScript, HTML, and CSS.
 
-# Replit Live Link
-Feel free to check out the deployed project via the link below (Replit):
-
-Deployed Project: https://inventory-tracker-crud.jayantmehta1.repl.co/item
-
 # Demo
 1) Users can add a new item to the inventory item list and specify details such as the item name, quantity, and relevant comments.
 
