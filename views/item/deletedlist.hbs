@@ -1,0 +1,27 @@
+<h3>Recently Deleted Item List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Comments</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.quantity}}</td>
+            <td>{{this.comments}}</td>
+            <td>
+                <a href="/item/restore/{{this._id}}" onclick="return confirm('Are you sure to restore this record ?');"><i class="fa fa-undo fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+    <div class="form-group">
+        <a class="btn btn-secondary" href="/item"><i class="fa fa-plus"></i>Add New Item</a>
+        <a class="btn btn-secondary" href="/item/list"><i class="fa fa-list-alt"></i> View Active Items</a>
+    </div>

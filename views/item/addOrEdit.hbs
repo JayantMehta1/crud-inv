@@ -1,0 +1,26 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/item" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{item._id}}">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" name="name" placeholder="Name" value="{{item.name}}">
+        <div class="text-danger">
+            {{item.nameError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Quantity</label>
+        <input type="text" class="form-control" name="quantity" placeholder="Quantity" value="{{item.quantity}}">
+        <div class="text-danger">
+            {{item.quantityError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Comments</label>
+        <input type="text" class="form-control" name="comments" placeholder="Comments" value="{{item.comments}}">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/item/list"><i class="fa fa-list-alt"></i> View Active Items</a>
+        <a class="btn btn-secondary" href="/item/deleted/list"><i class="fa fa-list-alt"></i> View Recently Deleted Items</a>
+    </div>
+</form>

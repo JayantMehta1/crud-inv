@@ -1,0 +1,28 @@
+<h3>Item List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Comments</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.quantity}}</td>
+            <td>{{this.comments}}</td>
+            <td>
+                <a href="/item/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/item/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+    <div class="form-group">
+        <a class="btn btn-secondary" href="/item"><i class="fa fa-plus"></i>Add New Item</a>
+        <a class="btn btn-secondary" href="/item/deleted/list"><i class="fa fa-list-alt"></i> View Recently Deleted Items</a>
+    </div>
